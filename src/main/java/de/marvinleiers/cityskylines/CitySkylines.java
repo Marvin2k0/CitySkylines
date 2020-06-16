@@ -69,6 +69,9 @@ public final class CitySkylines extends JavaPlugin implements Listener
             return new ArrayList<>();
         }
 
+        if (args.length > 3)
+            return new ArrayList<>();
+
         return super.onTabComplete(sender, command, alias, args);
     }
 
