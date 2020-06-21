@@ -31,6 +31,13 @@ public class Text
         config.addDefault("claimed", "&7Chunk has been claimed!");
         config.addDefault("alreadyclaimed", "&7This chunk has already been claimed!");
         config.addDefault("cantbuild", "&7You can't build or break blocks here!");
+        config.addDefault("notenoughmoney", "&7You don't have enough money for that!");
+        config.addDefault("claimprice", 25000);
+        config.addDefault("hospital-needed", "&7Your citizen need hospitals, build more!");
+        config.addDefault("energy-needed", "&7Your citizen need energy, produce more!");
+        config.addDefault("water-needed", "&7Your citizen need water, build more pumps!");
+        config.addDefault("received-income", "&7You received your income of &b%money%€");
+        config.addDefault("income", "&7Your income is: &b%income%€");
 
         saveConfig();
     }

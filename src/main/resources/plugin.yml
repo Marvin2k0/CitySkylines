@@ -8,3 +8,5 @@ commands:
   city:
     permission: cs.city
     aliases: [cityskylines, cs]
+  income:
+    permission: cs.income
