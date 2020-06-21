@@ -70,7 +70,7 @@ public class City
         if (config.isSet(user.getConfig().getString("city") + ".people"))
             people = config.getDouble(user.getConfig().getString("city") + ".people");
 
-        people += 3;
+        people += Double.parseDouble(Text.get("persons-per-house", false));
 
         config.set(user.getConfig().getString("city") + ".people", people);
         saveConfig();
@@ -84,7 +84,7 @@ public class City
         if (config.isSet(user.getConfig().getString("city") + ".people"))
             people = config.getDouble(user.getConfig().getString("city") + ".people");
 
-        people -= 3;
+        people -= Double.parseDouble(Text.get("persons-per-house", false));;
 
         config.set(user.getConfig().getString("city") + ".people", people);
         saveConfig();

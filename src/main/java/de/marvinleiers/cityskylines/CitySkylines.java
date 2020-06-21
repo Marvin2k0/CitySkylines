@@ -206,9 +206,6 @@ public final class CitySkylines extends JavaPlugin implements Listener
         {
             ArrayList<String> list = new ArrayList<>();
             list.add("claim");
-            list.add("add");
-            list.add("remove");
-
             return list;
         }
 
