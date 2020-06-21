@@ -27,7 +27,7 @@ public class Text
         Text.config = plugin.getConfig();
 
         config.options().copyDefaults(true);
-        config.addDefault("prefix", "&b[CitySkylines&8]&f");
+        config.addDefault("prefix", "&b[CitySkylines]&f");
         config.addDefault("claimed", "&7Chunk has been claimed!");
         config.addDefault("alreadyclaimed", "&7This chunk has already been claimed!");
         config.addDefault("cantbuild", "&7You can't build or break blocks here!");
@@ -38,6 +38,7 @@ public class Text
         config.addDefault("water-needed", "&7Your citizen need water, build more pumps!");
         config.addDefault("received-income", "&7You received your income of &b%money%€");
         config.addDefault("income", "&7Your income is: &b%income%€");
+        config.addDefault("no-city", "&cYou don't have a city");
         config.addDefault("loan-limit", 500000);
         config.addDefault("loan", "&7You took a loan for %amount%€");
         config.addDefault("not-allowed", "&cYou are not allowed to take another loan!");
