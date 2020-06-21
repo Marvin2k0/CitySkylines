@@ -6,6 +6,7 @@ import de.marvinleiers.cityskylines.users.User;
 import de.marvinleiers.cityskylines.utils.Text;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockPlaceEvent;
 
 import java.io.File;
 import java.io.IOException;
@@ -174,11 +175,15 @@ public class City
         saveConfig();
     }
 
-    public static void addIncome(Player player, double cost, double amount)
+    public static void addIncome(BlockPlaceEvent event, Player player, double cost, double amount)
     {
         if (CitySkylines.getEconomy().getBalance(player) < cost)
         {
             player.sendMessage(Text.get("notenoughmoney"));
+
+            if (event != null)
+                event.setCancelled(true);
+
             return;
         }
 
@@ -194,6 +199,11 @@ public class City
 
         config.set(user.getConfig().getString("city") + ".income", income);
         saveConfig();
+    }
+
+    public static void addIncome(Player player, double cost, double amount)
+    {
+        addIncome(null, player, cost, amount);
     }
 
     public static double getCityMoney(Player player)

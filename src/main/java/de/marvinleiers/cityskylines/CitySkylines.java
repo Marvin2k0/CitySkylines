@@ -160,7 +160,16 @@ public final class CitySkylines extends JavaPlugin implements Listener
                                 flag = true;
                             }
 
-                            getEconomy().depositPlayer(player, flag ? income * 0.75 : income);
+                            double amount = flag ? income * 0.75 : income;
+
+                            if (amount >= 0)
+                            {
+                                getEconomy().depositPlayer(player, amount);
+                            }
+                            else
+                            {
+                                getEconomy().withdrawPlayer(player, -amount);
+                            }
 
                             if (player.isOnline())
                                 ((Player) player).sendMessage(Text.get("received-income").replace("%money%", (flag ? income * 0.75 : income) + ""));

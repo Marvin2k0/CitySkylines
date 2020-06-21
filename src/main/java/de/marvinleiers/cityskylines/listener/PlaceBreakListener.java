@@ -24,43 +24,43 @@ public class PlaceBreakListener implements Listener
 
         if (block.getType() == Material.DIORITE)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-diorite", false)), Double.parseDouble(Text.get("rate-diorite", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-diorite", false)), Double.parseDouble(Text.get("rate-diorite", false)));
             City.addPerson(player);
             City.addHouse(player);
         }
         else if (block.getType() == Material.POLISHED_DIORITE)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-polished-diorite", false)), Double.parseDouble(Text.get("rate-polished-diorite", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-polished-diorite", false)), Double.parseDouble(Text.get("rate-polished-diorite", false)));
         }
         else if (block.getType() == Material.CYAN_TERRACOTTA)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-cyan-terracotta", false)), Double.parseDouble(Text.get("rate-cyan-terracotta", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-cyan-terracotta", false)), Double.parseDouble(Text.get("rate-cyan-terracotta", false)));
         }
         else if (block.getType() == Material.WHITE_CONCRETE)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-white-concrete", false)), Double.parseDouble(Text.get("rate-white-concrete", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-white-concrete", false)), Double.parseDouble(Text.get("rate-white-concrete", false)));
         }
         else if (block.getType() == Material.BLACK_TERRACOTTA)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-black-terracotta", false)), Double.parseDouble(Text.get("rate-black-terracotta", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-black-terracotta", false)), Double.parseDouble(Text.get("rate-black-terracotta", false)));
         }
         else if (block.getType() == Material.STONE_BRICKS)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-stone-bricks", false)), Double.parseDouble(Text.get("cost-stone-bricks", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-stone-bricks", false)), Double.parseDouble(Text.get("cost-stone-bricks", false)));
         }
         else if (block.getType() == Material.QUARTZ_SLAB)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-quartz-slab", false)), Double.parseDouble(Text.get("rate-quartz-slab", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-quartz-slab", false)), Double.parseDouble(Text.get("rate-quartz-slab", false)));
             City.addEnergySrc(player);
         }
         else if (block.getType() == Material.COBBLESTONE_WALL)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-cobblestone-wall", false)), Double.parseDouble(Text.get("rate-cobblestone-wall", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-cobblestone-wall", false)), Double.parseDouble(Text.get("rate-cobblestone-wall", false)));
             City.addWaterSrc(player);
         }
         else if (block.getType() == Material.MAGENTA_TERRACOTTA)
         {
-            City.addIncome(player, Double.parseDouble(Text.get("cost-magenta-terracotta", false)), Double.parseDouble(Text.get("rate-magenta-terracotta", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-magenta-terracotta", false)), Double.parseDouble(Text.get("rate-magenta-terracotta", false)));
             City.addHealthSrc(player);
         }
     }
