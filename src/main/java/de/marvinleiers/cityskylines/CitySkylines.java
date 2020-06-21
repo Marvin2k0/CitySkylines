@@ -1,6 +1,7 @@
 package de.marvinleiers.cityskylines;
 
 import de.marvinleiers.cityskylines.city.City;
+import de.marvinleiers.cityskylines.commands.LoanCommand;
 import de.marvinleiers.cityskylines.listener.PlaceBreakListener;
 import de.marvinleiers.cityskylines.users.User;
 import de.marvinleiers.cityskylines.utils.Text;
@@ -60,6 +61,8 @@ public final class CitySkylines extends JavaPlugin implements Listener
         this.getCommand("city").setTabCompleter(this);
 
         this.getCommand("income").setExecutor(this);
+
+        this.getCommand("loan").setExecutor(new LoanCommand());
 
         this.getServer().getPluginManager().registerEvents(this, this);
         this.getServer().getPluginManager().registerEvents(new PlaceBreakListener(), this);

@@ -46,7 +46,7 @@ public class PlaceBreakListener implements Listener
         }
         else if (block.getType() == Material.STONE_BRICKS)
         {
-            City.addIncome(event, player, Double.parseDouble(Text.get("cost-stone-bricks", false)), Double.parseDouble(Text.get("cost-stone-bricks", false)));
+            City.addIncome(event, player, Double.parseDouble(Text.get("cost-stone-bricks", false)), Double.parseDouble(Text.get("rate-stone-bricks", false)));
         }
         else if (block.getType() == Material.QUARTZ_SLAB)
         {

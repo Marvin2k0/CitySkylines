@@ -10,3 +10,5 @@ commands:
     aliases: [cityskylines, cs]
   income:
     permission: cs.income
+  loan:
+    permission: cs.loan
